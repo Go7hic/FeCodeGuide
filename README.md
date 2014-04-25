@@ -25,7 +25,7 @@ FeCodeStyle
 
  	
 
- - 不要忽略可选的关闭标签（例如，</li> 和 </body>）。
+ - 不要忽略可选的关闭标签（例如</li> 和 </body>）。
 
 **2.使用html5 doctype** 	
 <!DOCTYPE html>
