@@ -68,8 +68,8 @@ Classes 是为高可复用组件设计的，所以他们处在第一位。Ids �
 <input type="checkbox" value="1" checked="chencked">
 可以写成
 <input type="checkbox" value="1" checked> 	
-**9，尽量减少标签数量** 	
-**10标签嵌套规范** 
+**9.尽量减少标签数量** 	
+**10.标签嵌套规范** 
 
 
  - a.块元素可以包含内联元素或某些块元素, 但内联元素却不能包含块元素, 它只能包含其它的内联元素
