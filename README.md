@@ -144,7 +144,8 @@ Visual 外观
 Positioning 处在第一位，因为他可以使一个元素脱离正常文本流，并且覆盖盒模型相关的样式。盒模型紧跟其后，因为他决定了一个组件的大小和位置。
 
 其他属性只在组件 内部 起作用或者不会对前面两种情况的结果产生影响，所以他们排在后面。
-这里推荐一个网站给大家，http://csscomb.com/online/可以在线格式化你的css代码，还有插件哦。
+这里推荐一个网站给大家，http://csscomb.com/online/      
+可以在线格式化你的css代码，还有插件哦。
 
     .declaration-order {
       /* Positioning */
