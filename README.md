@@ -63,12 +63,15 @@ src, for, type, href
 title, alt 	
 aria-*, role 	
 Classes 是为高可复用组件设计的，所以他们处在第一位。Ids 更加具体而且应该尽量少使用（例如, 页内书签），所以他们处在第二位。
+
 **8.可以不必为Boolean属性取值** 
 
-<input type="checkbox" value="1" checked="chencked">
+```<input type="checkbox" value="1" checked="chencked">```
 可以写成
-<input type="checkbox" value="1" checked> 	
+```<input type="checkbox" value="1" checked>```
+
 **9.尽量减少标签数量** 	
+
 **10.标签嵌套规范** 
 
 .a 块元素可以包含内联元素或某些块元素, 但内联元素却不能包含块元素, 它只能包含其它的内联元素;
