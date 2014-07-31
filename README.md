@@ -1,10 +1,10 @@
-FeCodeStyle
+FeCodeGuide
 ===========
 
-前端代码书写规范
+前端开发编码规范
 
 
-总结自己的前端书写规范，包括html ,css ,js.
+总结自己的前端开发编码规范，包括html ,css ,js,前端安全.
 
 
 
