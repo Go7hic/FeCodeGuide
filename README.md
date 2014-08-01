@@ -955,3 +955,5 @@ foo");evil_script("
 ? 转成 %3F
 / 转成 %2F
 ```
+
+当然我这里只是简单的说了一下基本的对输入字符进行转义，真正要防御好前端攻击还有很多要做的，可以参考这个更全一点的安全编码规范：http://www.owasp.org.cn/owasp-project/download/OWASPV1.pdf
