@@ -388,12 +388,12 @@ Class 的命名应该尽量短，也要尽量明确。
 
 字符串应该使用双引号且保持一行，避免在字符串中使用斜线另起一行。
 ```
-//好的写法
+// 好的写法
 var name = "gothic"
 ```
 
 ```
-//不好的写法
+// 不好的写法
 var name = 'gothic'
 ```
 
@@ -406,12 +406,12 @@ var name = 'gothic'
  - 当函数的返回值期望是对象时，被用作返回值传出。  
 
 ```
-/好的写法
+// 好的写法
 var person = null;
 ```
 
 ```  
-//好的写法 
+// 好的写法 
 function getPerson() {
 	if (condition) {
 	return new Person("gothic");
@@ -421,7 +421,7 @@ function getPerson() {
 }
 ```
 ```
-//不好的写法
+// 不好的写法
 var person;
 if (person != null) {
 	doSomething();
@@ -431,9 +431,9 @@ if (person != null) {
 避免使用特殊值 `undefined`。判断一个变量是否定义应该使用typeof操作符  
 
 ```
-//好的写法
+// 好的写法
 if (typeof variable == "undefined") {
-	//do something
+	// do something
 }  
 ```
 
@@ -462,13 +462,13 @@ var found = (values[i]===item);
 
 
 ```
-//好的写法
+// 好的写法
 var found = (values[i] === item);
-//好的写法
+// 好的写法
 if (found && (count >10)) {
 	doSomething();
 }
-//不好的写法，左括号之后有空格
+// 不好的写法，左括号之后有空格
 var found = ( values[i] === item);
 //不好的写法，右括号之前有额外的空格
 if (found && (count > 10) ) {
@@ -488,7 +488,7 @@ if (found && (count > 10) ) {
 
 
 ```
-//好的写法
+// 好的写法
 var object = {
 	key: value1,
 	key2: value2,
@@ -497,7 +497,7 @@ var object = {
 	},
 	key3: value3
 };
-//不好的写法:不恰当的缩进
+// 不好的写法:不恰当的缩进
 var object = {
 				key1: value1,
 				key2: value2,
@@ -522,27 +522,27 @@ var object = {
 * 多行，用来注释掉一个代码块。 
 
 ```
-//好的写法
+// 好的写法
 if (condition) {
 
-	//如果代码执行到这里，则表明通过了所有的安全性检查
+	// 如果代码执行到这里，则表明通过了所有的安全性检查
 	allowed();
 }
-//不好的写法:注释之前没有空行
+// 不好的写法:注释之前没有空行
 if (condition) {
-	//如果代码执行到这里，则表明通过了所有的安全性检查
+	// 如果代码执行到这里，则表明通过了所有的安全性检查
 	allowed();
 }
 ```
 ```
-//不好的写法：这里应当使用多行注释
-//啊啊啊啊啊啊啊啊
-//么么么么么
-//么么么么么么么么啦啦啦啦啦拉了拉了
-//lllllllllll
+// 不好的写法：这里应当使用多行注释
+// 啊啊啊啊啊啊啊啊
+// 么么么么么
+// 么么么么么么么么啦啦啦啦啦拉了拉了
+// lllllllllll
 if (condition) {
 	
-	//如果代码执行到这里，则表明通过了所有的安全性检查
+	// 如果代码执行到这里，则表明通过了所有的安全性检查
 	allowed();
 }
 ```
@@ -617,7 +617,7 @@ FIXME: 说明代码任何可能的改动都需要评审
 这些声明可在一行也可在多行注释里使用  
 ```
 // 好的写法
-//TODO:我希望找到一种更块的方式
+// TODO:我希望找到一种更块的方式
 doSomething();
 ```
 
@@ -788,7 +788,7 @@ switch (value) {
 		throw new Error(this shouldn't happen);
 }  
 ```  
-**15.留白**  
+**15.留白空格**  
 
 在逻辑相关的代码块之间添加空行可以提高代码的可读性。  
 两行空行的情况下：  
@@ -801,10 +801,42 @@ switch (value) {
 - 方法中局部变量和第一行语句之间。 
 - 方法中逻辑代码块之间以提升代码的可读性。  
 
-空格在以下情况：  
-- 关键词后跟括号的情况应当用空格隔开。  
-- 参数列表中逗号之后应当保留一个空格。  
-- 所有的除了点(.)之外的二元运算符，其操作数都应当用空格隔开。单目运算符的操作数之间不应该用空白隔开，诸如一元减号，递增(++),递减(--).
+空格在以下情况： 
+
+- for循环中的分号之后，比如 `for (var i = 0; i < 10; i += 1) {...}`
+- for循环中初始化多个变量，比如 `for (var i = 0, max = 10; i < max; i += 1) {...}`
+- 分隔数组项的逗号之后，`var a = [1, 2, 3];`
+- 对象属性后的逗号以及名值对之间的冒号之后，`var o = {a: 1, b: 2};`
+- 函数参数中，`myFunc(a, b, c)`
+- 函数声明的花括号之前，`function myFunc() {}`
+- 匿名函数表达式function之后，`var myFunc = function () {};`
+
+另外，我们推荐在运算符和操作数之间添加空格。也就是说在+, -, *, =, <, >, <=, >=, ===, !==, &&, ||, +=符号前后都添加空格。
+
+	// generous and consistent spacing
+	// makes the code easier to read
+	// allowing it to "breathe"
+	var d = 0,
+		a = b + 1;
+	if (a && b && c) {
+		d = a % c;
+		a += d;
+	}
+
+	// antipattern
+	// missing or inconsistent spaces
+	// make the code confusing
+	var d= 0,
+		a =b+1;
+	if (a&& b&&c) {
+		d=a %c;
+		a+= d;
+	}
+
+最后，还应当注意，最好在花括号旁边添加空格：
+
+- 在函数、if-else语句、循环、对象直接量的左花括号之前补充空格（{）
+- 在右花括号和else和while之间补充空格
 
 
 ###0X05 前端安全编码规范
